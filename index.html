@@ -3,60 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Mebel Magazin</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Шапка для сайта</title>
 </head>
 <body>
-<!-- Header start-->
-    <header class="header">
-        <div class="header_white">
-            <div class="wrapper_white">
 
-                <div class="logo">
-                    <img src="./img/svg/header-logo.svg" alt="/" class="logo_link">
-                </div>
+    <main class="main">
 
-                <div class="header_items-white">
+        <div class="intro_img">
+            <img src="./img/png/styll.png" alt="styl">
+        </div>
 
-                    <div class="header_item-white">
-                        <a href="#" class="header_item-link">
-                            О НАС
-                        </a>
+        <header class="header"> <!--Контейнер, для шапки-->
+
+            <div class="wrapper"> <!--С помощью этого контейнера задается ширина и расположение дива, который обернут в него(в devtools его не видно)-->
+                <div class="header_wrapper">
+
+                    <div class="header_list">
+
+                        <div class="header_logo">
+                            <a href="/" class="logotupe">
+                            <img src="./img/svg/header-logo.svg" alt="/#" class="logo">
+                            </a>
+                        </div>
+
+                        <div class="header_item">
+                            <a href="#" class="header_title">МЕБЕЛЬ</a>
+                        </div>
+
+                        <div class="header_item">
+                            <a href="#" class="header_title">ОСВЕЩЕНИЕ</a>
+                        </div>
+
+                        <div class="header_item">
+                            <a href="#" class="header_title">ТЕКСТИЛЬ</a>
+                        </div>
+
                     </div>
 
-                    <div class="header_item-white">
-                        <a href="#" class="header_item-link">
-                            МЕНЮ
-                        </a>
-                    </div>
+                    <div class="header_list2">
 
-                    <div class="header_item-white">
-                        <a href="#" class="header_item-link">
-                            ТОВАРЫ
-                        </a>
+                        <div class="header_item2">
+                            <a href="#" class="header_vector-button">
+                                <img src="./img/svg/vector.svg" alt="#" class="header_vector">
+                            </a>
+                        </div>
+
+                        <div class="header_item2">
+                            <a href="#" class="header_basket-button">
+                                <img src="./img/svg/magazin.svg" alt="#" class="header_basket">
+                            </a>
+                        </div>
+
                     </div>
 
                 </div>
             </div>
+        </header>
 
-        </div>
+        <div class="intro">
+            <div class="wrapper">
+                    <div class="intro_conteiner1">
+                        <div class="int-content1">
+                            <div class="intro_title">
+                                <h1 class="intro_heading">
+                                    ДИЗАЙНЕРСКАЯ<br>МЕБЕЛЬ
+                                </h1>
+                            </div>
 
-        <div class="header_beige">
-            <div class="wrapper_beige">
+                            <div class="nadpisi">
+                                <h2 class="armchair">Кресло "Антиквар"</h2>
+                            </div>
 
-                <div class="header_items-beige">
-                    <div class="header_item-beige">
-                        <img src="./img/svg/vector.svg" alt="#" class="beige-cart">
+                            <div class="intro_price">
+
+                                <div class="prices">
+                                    <h2 class="price1">$380</h2>
+                                </div>
+
+                                <div class="prices">
+                                    <h2 class="price2">$240</h2>
+                                </div>
+
+                            </div>
+
+                            <div class="button">
+                                <div class="element_button">
+                                    <a href="#" class="buy">КУПИТЬ</a>
+                                </div>
+                            </div>
+
+                        </div>  
                     </div>
-
-                    <div class="header_item-beige">
-                        <img src="./img/svg/magazin.svg" alt="#" class="beige-cart">
-                    </div>
-                </div>
-
+                </div>    
             </div>
         </div>
-    </header>
+    </main>
+    <div class="menu">
+            
+        <div class="new_wrapper">
+            <div class="wrapper">
+                <div class="new_items">
+                    <div class="container_sm">
 
-<!-- Header end-->
+                        <div class="new_item item_grid_sm flex_new-title">
+                            <h2 class="new_title section-title">НОВИНКИ</h2>
+                        </div>
+
+                        <div class="new_item item_grid-sm">
+                            <img src="./img/png/styl2.png" alt="стул" class="img_furniture img_fr1">
+                            <div class="text_furniture">Стул «Смеркается»</div>
+                            <div class="price_furniture">$280</div>
+                        </div>
+
+                        <div class="new_item item_grid_sm">
+                            <img src="./img/png/lamp.png" alt="люстра" class="img_furniture">
+                            <div class="text_furniture">Люстра «Облако»</div>
+                            <div class="price_furniture">$250</div>
+                        </div>
+
+                        <div class="new_item item_grid_sm">
+                            <img src="./img/png/table.png" alt="стok" class="img_furniture">
+                            <div class="text_furniture">Стол «Крем брюле»</div>
+                            <div class="price_furniture">$320</div>
+                        </div>
+
+                    </div>
+                        <div class="new_item item_grid_lg">
+                            <img src="./img/png/styl3.png" alt="стул" class="img_furniture img_lg">
+                            <div class="text_furniture">Стул офисный «Белый шоколад»</div>
+                            <div class="price_furniture">$320</div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Menu end-->
+    <!--Coment start-->
+    <div class="coment">
+        <div class="coment_wrapper">
+            <div class="container_coment">
+                <div class="coment_grid-item">
+                    <div class="elipse_arrow-left"></div>
+                </div>
+                <div class="coment_grid-item">
+                    <div class="coment_item-center">
+                        <div class="coment-image">
+                            <img src="./img/png/lady.png" class="coment-img">
+                        </div>
+
+                        <div class="coment-name">
+                            Елена Новикова
+                        </div>
+
+                        <div class="coment-type">
+                            студентка
+                        </div>
+
+                        <div class="coment-text">
+                            «Хочу поделиться своими впечатлениями по использованию дивана «Бродвей»,<br>
+                            заказывала в конце 2016 года. Держится великолепно. 
+                            Спасибо, большое<br> сотрудникам этого чудесного магазина.»
+                        </div>
+                    </div>
+                    <svg class="scroll" xmlns="http://www.w3.org/2000/svg" width="53" height="8" viewBox="0 0 53 8" fill="none">
+                        <circle cx="4" cy="4" r="4" fill="#B3B3B3"/>
+                        <circle cx="19" cy="4" r="3.5" stroke="#B3B3B3"/>
+                        <circle cx="34" cy="4" r="3.5" stroke="#B3B3B3"/>
+                        <circle cx="49" cy="4" r="3.5" stroke="#B3B3B3"/>
+                    </svg>
+                </div>
+                <div class="coment_grid-item">
+                    <div class="elipse_arrow-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+</html>

@@ -360,17 +360,17 @@ textarea {
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
   /* lato-700 - latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
   /* lato-900 - latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Lato';
     font-style: normal;
@@ -385,9 +385,9 @@ textarea {
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/playfair-display-v30-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
   /* playfair-display-700 - cyrillic_latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Playfair Display';
     font-style: normal;
@@ -402,31 +402,48 @@ textarea {
     font-style: normal;
     font-weight: 500;
     src: url('../fonts/open-sans-v35-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
   /* open-sans-500italic - latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Open Sans';
     font-style: italic;
     font-weight: 500;
     src: url('../fonts/open-sans-v35-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
   /* open-sans-600 - latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     src: url('../fonts/open-sans-v35-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
   /* open-sans-700 - latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
+  /* roboto-500 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-v30-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jost-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/jost-v14-cyrillic_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 *, html, *::before, *::after {
     box-sizing: border-box;
@@ -443,19 +460,48 @@ body {
     line-height: 1.2;
     font-weight: normal;
     color: #000;
-
     background-color: #F9FDFF;
+
 }                                /*Базовые настройки всего документа*/
+
+html {
+    width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 1440px) {
+   .container {
+        max-width: 970px;
+   }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 750px;
+   }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: none;
+   }
+}
 
 .wrapper {
     max-width: 1138.63px;
-    margin: 0 auto;
+    margin: 0px auto;
+    min-height: 100%;
 }                               /*wrapper - изменяет только ширину и положение контейнера, который находится внути этого класса*/
 
 .main {
-    background: linear-gradient(to right, #F9FDFF 916px,#FCEAE8 916px);
+    background: url(../img/png/intro-img.jpg) no-repeat 100%;
+    width: 1440px;
     height: 751px;
-    position: relative;
 
     margin-bottom: 120px;
 }
@@ -464,8 +510,8 @@ img {
     max-width: 100%;
     height: auto;
 }
-/*Header style start*/
 
+/*Header style start*/
 .header {
     width: 100%;
     height: 235px;
@@ -481,19 +527,16 @@ img {
 
 .header_list {
     display: flex;
-    z-index: 3;
+    justify-content: space-between;
 }
 
 .header_list2 {
     display: flex;
+    gap: 22px;
 }
 
 .header_item {
     margin-right: 60px;
-}
-
-.header_item:last-child {
-    margin-right: 553px;
 }
 
 .header_title {
@@ -503,14 +546,6 @@ img {
     font-family: 'Open Sans';
     font-size: 14px;
     font-style: normal;
-}
-
-.header_item2 {
-    margin-right: 22px;
-}
-
-.header_item2:last-child {
-    margin-right: 0;
 }
 
 .header_logo {
@@ -532,14 +567,12 @@ img {
     justify-content: space-between;
 }
 
-.intro_container1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.intro_conteiner1 {
+    display: flex; 
 }
 
 .int-content1 {
-    width: 545px;
+    margin-right: 105px;
 }
 
 .intro_title {
@@ -605,6 +638,8 @@ img {
 
 .button:hover {
     background-color: #696969;
+
+    transition: 0.5s linear;
 }
 
 .buy {
@@ -616,25 +651,21 @@ img {
     font-weight: 400;
     line-height: normal;
 }
-
-.intro_img {
-    position: absolute;
-
-    top: 177px;
-    left: 703px;
-}
+ 
 
 /*intro style end*/
 
 /*Menu style start*/
 
 .menu {
+    width: 1440px;
     margin-bottom: 102px;
 }
 
 .new_wrapper {
     height: 614px;
-    width: 100%;
+    /*width: 1138.63px;*/
+    margin: 0 auto;
 }
 
 .new_items {
@@ -671,7 +702,7 @@ img {
 .section-title::after {   /*Псевдо-элемент*/
     display: block;
     content: '';
-    width: 90px;
+    /*width: 90px;*/
     height: 4px;
     bottom: 0;
     left: 0;
@@ -743,13 +774,16 @@ img {
 }
 
 /*Menu style end*/
+
 /*Coment style start*/
 .coment {
+    margin: 0 auto;
     margin-bottom: 100px;
+    width: 1440px;
 }
 
 .coment_wrapper {
-    max-width: 833.01px;
+    width: 833.01px;
     margin: 0 auto;  
 }
 
@@ -893,10 +927,12 @@ img {
     background-color: #696969;
 }
 /*Coment style end*/
+
 /*Menu 2 style start*/
 .menu2 {
     height: 614px;
-    width: 100%;
+    margin-bottom: 66px;
+    margin: 0 auto; 
 
     position: relative;
 }
@@ -913,7 +949,7 @@ img {
 }
 
 .menu2_wrapper {
-    width: 1138.63px;
+    /*width: 1138.63px;*/
     height: 541px;
     margin: 0 auto;
 
@@ -925,17 +961,17 @@ img {
        z-index: 2;
 }
 .menu2_title1 {
-font-family: 'Playfair Display';
-color: #303032;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-padding-bottom: 11px; /*7px - отступ между заголовком и псевдоэлементом, + 3px - высота самого псевдоэлемента, 
-                        что бы на эту полоску не что не наехало*/
+    font-family: 'Playfair Display';
+    color: #303032;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 11px; /*7px - отступ между заголовком и псевдоэлементом, + 3px - высота самого псевдоэлемента, 
+                            что бы на эту полоску не что не наехало*/
 
-position: relative;
+    position: relative;
 
-margin-bottom: 37px;
+    margin-bottom: 37px;
 }
 
 .menu2_title1::after {   /*Псевдо-элемент*/
@@ -981,10 +1017,11 @@ margin-bottom: 37px;
 .menu2_items {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .menu2_item {
-    width: 209px;
+    width: 210px;
     height: 355px;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 20px 0px #0000000D;
@@ -993,6 +1030,10 @@ margin-bottom: 37px;
 }
 
 .menu2_item:hover .menu2_button { 
+    display: block;
+}
+
+.menu2_item:hover .menu2_item-border_top { 
     display: block;
 }
 
@@ -1012,7 +1053,7 @@ margin-bottom: 37px;
 } 
 
 .menu2_item-price {
-    width: 100%;
+    max-width: 100%;
     height: 40px;
 
     display: flex;
@@ -1043,7 +1084,7 @@ margin-bottom: 37px;
 }
 
 .menu2_item-image {
-    width: 100%;
+    max-width: 100%;
     height: 255px;
     display: flex;
     justify-content: flex-end;
@@ -1053,22 +1094,109 @@ margin-bottom: 37px;
     display: none;
     bottom: 0;
 
-    width: 100%;
+    background-color: #303032;
     height: 58px;
-    background-color: black;
-    text-align: center;
+    width: 100%;
+
+}
+
+.menu2-button_container {
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
 .menu2_button-buy {
-    color: white;
+    color: #FFF;
     text-decoration: none;
     font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
-
-    padding-top: 18px;
+    text-align: center;
 }
 
-/*Menu 2 style end*/
+.container_button {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.menu2_item-border_top {
+    display: none;
+    position: absolute;
+    top: 0;
+
+    background-color: #303032;
+    width: 100%;
+    height: 5px;
+}
+/*Menu 2 style end*/
+/*Footer style start*/
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 1400px;
+    height: 234px;
+    background-color: #fff; 
+}
+
+.footer_container {
+    padding-top: 100px;
+    width: 1138.63px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_container-logo-information {
+    display: flex;
+    margin-bottom: 31px;  
+    gap: 63px;
+}
+
+.footer_information {
+    display: flex;
+    gap: 60px;
+}
+
+.footer_container-phone-mail {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.phone {
+    margin-right: 7px;
+}
+
+.mail {
+    margin-right: 8px;
+}
+
+.footer_title {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #303032;
+}
+
+.phone-main {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-decoration: none;
+    color: #303032;
+}
+
+.footer_border {
+    border-bottom: 1px solid #00000033;
+    max-width: 100%;
+}
+/*Footer style end*/

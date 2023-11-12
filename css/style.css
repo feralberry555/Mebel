@@ -1608,3 +1608,9 @@ img {
         padding-right: 61px;
     }
 }
+
+@media (max-width: 400px) {
+    .footer_mail {
+        padding: 0;
+    }
+}

@@ -1609,7 +1609,11 @@ img {
     }
 }
 
-@media (max-width: 400px) {
+media (max-width: 405px) {
+    .footer_phone {
+        padding-right: 20px;
+    }
+
     .footer_mail {
         padding: 0;
     }

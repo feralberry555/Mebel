@@ -1609,7 +1609,7 @@ img {
     }
 }
 
-media (max-width: 405px) {
+@media (max-width: 405px) {
     .footer_phone {
         padding-right: 20px;
     }

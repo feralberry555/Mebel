@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Сайт Мебели</title>
 </head>
-
 <body>
 <div class="container">
     <main class="main">
@@ -17,22 +15,22 @@
             <div class="wrapper">
                 <!--С помощью этого контейнера задается ширина и расположение дива, который обернут в него(в devtools его не видно)-->
                 <div class="header_wrapper">
-                    <div class="header_list">
-                        <div class="header_logo">
+                    <ul class="header_list">
+                        <li class="header_logo">
                             <a href="/" class="logotupe">
                                 <img src="./img/svg/header-logo.svg" alt="/#" class="logo">
                             </a>
-                        </div>
-                        <div class="header_item">
+                        </li>
+                        <li class="header_item">
                             <a href="#" class="header_title">МЕБЕЛЬ</a>
-                        </div>
-                        <div class="header_item">
+                        </li>
+                        <li class="header_item">
                             <a href="#" class="header_title">ОСВЕЩЕНИЕ</a>
-                        </div>
-                        <div class="header_item">
+                        </li>
+                        <li class="header_item">
                             <a href="#" class="header_title">ТЕКСТИЛЬ</a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                     <div class="header_list2">
                         <div class="header_item2">
                             <a href="#" class="header_vector-button">
@@ -44,6 +42,23 @@
                                 <img src="./img/svg/magazin.svg" alt="#" class="header_basket">
                             </a>
                         </div>
+                        <nav class="header_nav">
+                            <ul class="header_list">
+                                <li class="header_list-item">
+                                    <a href="#" class="header_link">МЕБЕЛЬ</a>
+                                </li>
+                                <li class="header_list-item">
+                                    <a href="#" class="header_link">ОСВЕЩЕНИЕ</a>
+                                </li>
+                                <li class="header_list-item">
+                                    <a href="#" class="header_link">ТЕКСТИЛЬ</a>
+                                </li>                               
+                            </ul>
+                            <div class="header_nav-close">
+                                <span class="header_nav-close-line"></span>
+                                <span class="header_nav-close-line"></span>
+                            </div>
+                        </nav>
                         <div class="header_item2 header_burger">
                             <span class="burger_line burger_line_first"></span>
                             <span class="burger_line burger_line_second"></span>
@@ -54,7 +69,7 @@
             </div>
         </header>
         <div class="intro_img-styll-mobile">
-            <img src="img/png/styll-mobile1.png" alt="стул" class="styll-mobile">
+            <img src="img/png/styll-mobile1.PNG" alt="стул" class="styll-mobile">
         </div>
         <div class="intro">
             <div class="wrapper">
@@ -289,7 +304,7 @@
                 <div class="menu2_scroll-mobile">
                     <img src="img/png/horizontal-scroll.png" alt="скролл">
                 </div>
-            </div>
+            </div>          
     </div>
     <!--Menu 2 end-->
     <!--Footer start-->
@@ -315,20 +330,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer_information">
-                    <div class="footer_inf-item">
+                <ul class="footer_information">
+                    <li class="footer_inf-item">
                         <a href="#" class="footer_title">ДОСТАВКА</a>
-                    </div>
-                    <div class="footer_inf-item">
+                    </li>
+                    <li class="footer_inf-item">
                         <a href="#" class="footer_title">ОПЛАТА</a>
-                    </div>
-                    <div class="footer_inf-item">
+                    </li>
+                    <li class="footer_inf-item">
                         <a href="#" class="footer_title">КОНТАКТЫ</a>
-                    </div>
-                    <div class="footer_inf-item">
+                    </li>
+                    <li class="footer_inf-item">
                         <a href="#" class="footer_title">ГАРАНТИИ</a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <div class="border-container">
                 <div class="footer_border"></div>
@@ -336,8 +351,7 @@
         </div>
     </footer>
     <!--Footer end-->
-    <script src="mebel.js"></script>
-</div>
+    </div>
+    <script src="mebel.js" defer></script>
 </body>
-
 </html>

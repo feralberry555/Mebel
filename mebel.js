@@ -1,6 +1,19 @@
 let leftBtn = document.querySelector('.elipse_arrow-left');
 let rightBtn = document.querySelector('.elipse_arrow-right');
 
+(function burgerClick() {
+	const burgerItem = document.querySelector('.header_burger'); //обраемся к методу document что бы передать блок .burger в переменную
+	const menu = document.querySelector('.header_nav')
+	const menuCloseItem = document.querySelector('.header_nav-close')
+	
+	burgerItem.addEventListener('click', () => {
+		menu.classList.add('header_nav-active');
+	});
+	menuCloseItem.addEventListener('click', () => {
+		menu.classList.remove('header_nav-active');
+	})
+}());
+
 let customerComments = {
 	avatarImg: './img/png/lady.png',
 	customerName: 'Елена Новикова',
